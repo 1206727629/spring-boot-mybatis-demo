@@ -1,0 +1,28 @@
+# Server settings  
+server:  
+    port: 80
+    address: 127.0.0.1
+    
+# SPRING PROFILES  
+spring:         
+    # HTTP ENCODING  
+    http:  
+        encoding.charset: UTF-8  
+        encoding.enable: true  
+        encoding.force: true  
+    mvc:
+        view.prefix: /WEB-INF/jsp/
+        view.suffix: .jsp
+
+    # DATASOURCE  
+    datasource:
+        db1: # 数据源1
+            jdbc-url: jdbc:mysql://localhost:3306/db1?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=GMT%2B8
+            username: root
+            password: root
+            driver-class-name: com.mysql.cj.jdbc.Driver
+        db2: # 数据源2
+            jdbc-url: jdbc:mysql://localhost:3306/db2?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=GMT%2B8
+            username: root
+            password: root
+            driver-class-name: com.mysql.cj.jdbc.Driver
